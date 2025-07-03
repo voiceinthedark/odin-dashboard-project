@@ -1,0 +1,99 @@
+/* ROBOTO FONTS */
+
+@font-face {
+  font-family: 'roboto';
+  src: url('fonts/roboto-italic-variablefont_wdthwght-webfont.woff2') format('woff2'),
+    url('fonts/roboto-italic-variablefont_wdthwght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url('fonts/roboto-variablefont_wdthwght-webfont.woff2') format('woff2'),
+    url('fonts/roboto-variablefont_wdthwght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* DEFAULT */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: 'roboto', sans-serif;
+  font-size: 1rem;
+}
+
+/* MAIN LAYOUT */
+main {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas: "sidebar header"
+    "sidebar content";
+  height: inherit;
+
+}
+
+.header {
+  background-color: #ff23f1;
+  grid-area: header;
+}
+
+/* CONTENT AREA */
+.content {
+  background-color: #334455;
+  grid-area: content;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "projects side";
+  height: 100%;
+}
+
+/* SIDEBAR AREA */
+
+.sidebar {
+  font-size: 1.8rem;
+  background-color: #5544ff;
+  grid-area: sidebar;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  nav>ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* MAIN CONTENT AREA */
+.projects {
+  background-color: #aa2faa;
+  grid-area: projects;
+
+}
+
+.content-side {
+  background-color: #aabbcc;
+  grid-area: side;
+}
+
+.announcement {
+  background-color: #717171;
+}
+
+.trending {
+  background-color: #424242;
+}
