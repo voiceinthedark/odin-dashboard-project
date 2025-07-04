@@ -27,6 +27,8 @@
 
 :root {
   --header-bg: #f8fbfe;
+  --projects-bg: #f9faff;
+  --card-bg: #efefef;
 
 }
 
@@ -230,11 +232,16 @@ main {
 .content .projects {
   display: flex;
   flex-direction: column;
+  background-color: var(--projects-bg);
+
+  h2{
+    margin-left: 6.8rem;
+  }
 }
 
 .content .projects .cards {
   height: inherit;
-  background-color: #aa2faa;
+  background-color: inherit;
   grid-area: projects;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -247,10 +254,12 @@ main {
 .projects>.cards>.card {
   font-size: 1.2rem;
   margin-top: 16px;
-  background-color: rgb(239, 120, 199);
+  background-color: var(--card-bg);
   padding: 8px 16px;
   width: 60%;
   height: 100%;
+  border-left: 8px solid #f34455;
+  border-radius: 8px;
 }
 
 .card>h3 {
