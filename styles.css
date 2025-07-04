@@ -235,7 +235,7 @@ main {
   background-color: var(--projects-bg);
 
   h2{
-    margin-left: 6.8rem;
+    margin-left: 6rem;
   }
 }
 
@@ -252,14 +252,27 @@ main {
 }
 
 .projects>.cards>.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   font-size: 1.2rem;
   margin-top: 16px;
   background-color: var(--card-bg);
   padding: 8px 16px;
-  width: 60%;
+  width: 70%;
   height: 100%;
   border-left: 8px solid #f34455;
   border-radius: 8px;
+
+  .card-footer{
+    display: flex;
+    gap: 8px;
+    align-self: flex-end;
+    svg{
+      width: 30px;
+      height: 30px;
+    }
+  }
 }
 
 .card>h3 {
