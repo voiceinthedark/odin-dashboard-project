@@ -25,6 +25,11 @@
   box-sizing: border-box;
 }
 
+:root{
+  --header-bg: #f8fbfe;
+
+}
+
 body {
   height: 100vh;
   padding: 0;
@@ -50,7 +55,7 @@ main {
 
 /* HEADER TOP LAYOUT */
 .header {
-  background-color: #ff23f1;
+  background-color: var(--header-bg);
   grid-area: header;
   display: flex;
   flex-direction: column;
@@ -81,6 +86,30 @@ main {
     width: 60%;
     height: 3em;
     background-color: #ffeeee;
+  }
+}
+
+.header-top .user-info{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-right: 8px;
+  svg{
+    width: 40px;
+    height: 40px;
+    fill: white;
+    stroke: black;
+  }
+  img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  .uname{
+    font-size: 130%;
+    font-weight: 700;
+
+    flex: 1 0 100%;
   }
 }
 
