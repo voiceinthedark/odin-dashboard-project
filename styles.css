@@ -28,12 +28,16 @@
 :root {
   --header-bg: #f8fbfe;
   --projects-bg: #f9faff;
+  --side-card-bg: #e2e2e2;
   --card-bg: #efefef;
+  --avatar-border-color: #fff325;
+  --search-bar-bg: #eee;
 
 }
 
 body {
   height: 100vh;
+  width: 100vw;
   padding: 0;
   margin: 0;
   font-family: 'roboto', sans-serif;
@@ -62,7 +66,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 8px 12px;
+  padding: 8px 18px;
 }
 
 .header .header-top {
@@ -83,11 +87,14 @@ main {
   }
 
   input[type="search"] {
+    appearance: none;
+    font-size: 115%;
     border-radius: 18px;
-    padding: 4px 12px;
+    border: none;
+    padding: 2px 12px;
     width: 60%;
     height: 3em;
-    background-color: #ffeeee;
+    background-color: var(--search-bar-bg);
   }
 }
 
@@ -108,6 +115,7 @@ main {
     width: 70px;
     height: 70px;
     border-radius: 50%;
+    border: 4px solid var(--avatar-border-color);
   }
 
   .uname {
@@ -125,33 +133,35 @@ main {
   .user {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 33px;
     font-size: 150%;
   }
 
   .user img {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
+    border: 4px solid var(--avatar-border-color);
   }
 
   .user>.user-pseudo {
     display: flex;
     flex-direction: column;
+    font-size: 1.8rem;
 
     span~span {
       font-weight: 700;
     }
   }
 
-  .action-user{
+  .action-user {
     display: flex;
     align-items: center;
     justify-self: flex-start;
     gap: 24px;
   }
 
-  .action-user > button{
+  .action-user>button {
     font-size: 130%;
     background-color: rgba(23, 94, 220, 80%);
     color: white;
@@ -198,6 +208,9 @@ main {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  position: fixed;
+  height: 100vh;
+  padding-right: 2rem;
 
   nav>ul {
     list-style: none;
@@ -234,7 +247,7 @@ main {
   flex-direction: column;
   background-color: var(--projects-bg);
 
-  h2{
+  h2 {
     margin-left: 6rem;
   }
 }
@@ -264,11 +277,12 @@ main {
   border-left: 8px solid #f34455;
   border-radius: 8px;
 
-  .card-footer{
+  .card-footer {
     display: flex;
     gap: 8px;
     align-self: flex-end;
-    svg{
+
+    svg {
       width: 30px;
       height: 30px;
     }
@@ -281,14 +295,68 @@ main {
 }
 
 .content-side {
-  background-color: #aabbcc;
+  background-color: var(--projects-bg);
   grid-area: side;
+  padding-right: 18px;
 }
 
 .announcement {
-  background-color: #717171;
+  background-color: var(--projects-bg);
+
+  &>.announcement-card {
+    padding: 8px 8px;
+    background-color: var(--side-card-bg);
+    border: 1px thin black;
+    border-radius: 12px;
+
+    &>div {
+      border-bottom: 1px solid rgb(20 19 10 / 0.3);
+    }
+  }
 }
 
 .trending {
-  background-color: #424242;
+  background-color: var(--projects-bg);
+
+  .trend-card {
+    background-color: var(--side-card-bg);
+    padding: 8px 8px;
+    border: 1px thin black;
+    border-radius: 12px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    .user-trend {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 24px;
+
+      &>div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      div span {
+        font-weight: 700;
+        font-size: 120%;
+      }
+
+      span~span {
+        font-size: 105%;
+        font-weight: 500;
+        color: rgb(5 5 5 / 0.6)
+      }
+    }
+
+    .user-trend>img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 3px solid var(--avatar-border-color);
+    }
+  }
 }
