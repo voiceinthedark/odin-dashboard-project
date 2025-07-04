@@ -25,7 +25,7 @@
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --header-bg: #f8fbfe;
 
 }
@@ -47,7 +47,7 @@ main {
     "sidebar content";
   height: inherit;
 
-  h1{
+  h1 {
     font-size: 180%;
   }
 
@@ -69,18 +69,18 @@ main {
   margin-top: 1em;
 }
 
-.header-top .search-bar{
+.header-top .search-bar {
   display: flex;
   width: 80%;
   align-items: center;
 
-  svg{
+  svg {
     width: 30px;
     height: 30px;
     fill: gray;
   }
 
-  input[type="search"]{
+  input[type="search"] {
     border-radius: 18px;
     padding: 4px 12px;
     width: 60%;
@@ -89,23 +89,26 @@ main {
   }
 }
 
-.header-top .user-info{
+.header-top .user-info {
   display: flex;
   align-items: center;
   gap: 24px;
   padding-right: 8px;
-  svg{
+
+  svg {
     width: 40px;
     height: 40px;
     fill: white;
     stroke: black;
   }
-  img{
+
+  img {
     width: 70px;
     height: 70px;
     border-radius: 50%;
   }
-  .uname{
+
+  .uname {
     font-size: 130%;
     font-weight: 700;
 
@@ -116,6 +119,44 @@ main {
 .header .header-bottom {
   display: flex;
   justify-content: space-between;
+
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 150%;
+  }
+
+  .user img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+
+  .user>.user-pseudo {
+    display: flex;
+    flex-direction: column;
+
+    span~span {
+      font-weight: 700;
+    }
+  }
+
+  .action-user{
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+    gap: 24px;
+  }
+
+  .action-user > button{
+    font-size: 130%;
+    background-color: rgba(23, 94, 220, 80%);
+    color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 4px 16px;
+  }
 }
 
 
@@ -142,7 +183,7 @@ main {
   margin-left: 8px;
 }
 
-.dashboard-header > svg{
+.dashboard-header>svg {
   width: 60px;
   height: 60px;
 }
@@ -167,7 +208,8 @@ main {
     display: flex;
     gap: 12px;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
       background-color: rgba(240, 240, 240, 10%);
     }
   }
